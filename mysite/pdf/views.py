@@ -40,3 +40,7 @@ def resume(request,id):
     filename = "resume.pdf"
     return response
 
+
+def list(request):
+    profile = Profile.objects.all()
+    return render(request,'pdf/list.html',{'profile':profile})
